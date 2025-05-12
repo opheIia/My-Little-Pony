@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MLP Result</title>
+  <link rel="shortcut icon" href="https://i.pinimg.com/originals/fe/03/c9/fe03c9b7d0e386d60e5f6e2e8d057a56.gif">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/applejack.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      margin-top: 10%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .text-with-image {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .text {
+      flex: 1 1 60%;
+      text-align: left;
+      padding-right: 150px;
+    }
+
+    .text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      animation: glow 2s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        text-shadow: 0 0 5px #fff5e6, 0 0 10px #ffeacc;
+      }
+      50% {
+        text-shadow: 0 0 10px #ffdd99, 0 0 20px #ffeacc;
+      }
+    }
+
+    .text p {
+      font-size: 1.25rem;
+    }
+
+    .sticker-side {
+      position: absolute;
+      top: -10px;
+      right: -30px;
+      width: 240px;
+      height: auto;
+      z-index: 2;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: #f4a460;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #f7ba84;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="content">
+    <div class="text-with-image">
+      <div class="text">
+        <h1>You’re Applejack!</h1>
+        <p>Honest, dependable, and strong. You value hard work,<br>and staying true to yourself no matter what.</p>
+      </div>
+      <img src="../images/applejack-pixel.png" alt="applejack sticker" class="sticker-side">
+    </div>
+    <a href="index.html" class="button">Retake the Quiz</a>
+  </div>
+</body>
+</html>
