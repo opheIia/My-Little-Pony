@@ -1,0 +1,238 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://i.pinimg.com/originals/52/fe/a4/52fea48f83e582368024af9423ef358d.gif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+}
+
+button {
+  width: 1200px;
+  height: 320px;
+  background-image: url('images/start-button.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 220px;
+  margin-bottom: 100px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.title {
+  font-family: 'Press Start 2P', cursive;
+  height: 200px;
+  font-size: 30px;
+  color: #fe90ad;
+  text-shadow:
+    -2px -2px 0 #fff,
+     2px -2px 0 #fff,
+    -2px  2px 0 #fff,
+     2px  2px 0 #fff;
+  margin-top: 70px;
+  animation: zoomPulse 4s ease-in-out infinite;
+  opacity: 1;
+}
+
+.title.pulse {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.title-2 {
+  font-family: 'Press Start 2P', cursive;
+  height: 200px;
+  font-size: 40px;
+  color: #fe90ad;
+  text-shadow:
+    -2px -2px 0 #fff,
+     2px -2px 0 #fff,
+    -2px  2px 0 #fff,
+     2px  2px 0 #fff;
+  margin-top: 30px;
+  margin-left: -50px;
+  animation: zoomPulse 4s ease-in-out infinite;
+  opacity: 1;
+}
+
+.title-2.pulse {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes zoomPulse {
+  0% {
+    transform: scale(0.97);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(0.97);
+  }
+}
+
+@keyframes zoomFadePulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.quiz-page {
+  position: relative;
+  background-image: url('images/quiz-background.png');
+  background-size: 100% auto;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.quiz-page .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.container {
+  position: absolute;
+  top: 45%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.question {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+  width: 500px;
+  height: 300px;
+  font-size: 15px;
+  justify-content: space-around;
+  color: #333;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin-top: 150px;
+  margin-left: -250px;
+}
+
+#question-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  max-height: 120px;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.answer {
+  background-color: #ff87b9;
+  margin: 15px auto;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button.answer {
+  width: 90%;
+  margin: 6px 0;
+  padding: 10px 8px;
+  font-size: 14px;
+  border-radius: 8px;
+  background-color: #ff87b9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.answer:hover {
+  background-color: #f56ea2;
+  transform: scale(1.05);
+}
+
+.answer:active {
+  background-color: #ff2a75;
+  transform: scale(0.95);
+}
+
+.signature {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  color: white;
+  opacity: 0.7;
+  z-index: 999;
+}

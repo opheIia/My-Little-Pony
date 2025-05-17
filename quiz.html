@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MLP Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://i.pinimg.com/originals/fe/03/c9/fe03c9b7d0e386d60e5f6e2e8d057a56.gif">
+</head>
+<body class="quiz-page">
+    <div class="overlay"></div>
+    <h1 class="title-2">Let’s Start the Quiz!</h1>
+    <div class="container">
+        <div id="quiz-container">
+          <div class="question">
+            <p id="question-text"></p>
+            <div class="answer" id="answer-a" data-answer="a">Option A</div>
+            <div class="answer" id="answer-b" data-answer="b">Option B</div>
+            <div class="answer" id="answer-c" data-answer="c">Option C</div>
+          </div>
+        </div>
+        <div id="result-container" style="display:none;">
+          <h2 id="result-text"></h2>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
